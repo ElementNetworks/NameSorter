@@ -31,5 +31,17 @@ namespace NameSorter.Tests.Entity.Person
 
             Assert.AreEqual("A", sortedList.First().LastName);
         }
+
+        [TestMethod]
+        public void Given_List_With_OneName_Return_OneName()
+        {
+            var sorter = new PersonSorter(new PersonNameComparer());
+            var list = new List<PersonDTO>();
+            list.Add(new PersonDTO("one", "A"));
+
+            var sortedList = sorter.Sort(list);
+
+            Assert.AreEqual("A", sortedList.First().LastName);
+        }
     }
 }
