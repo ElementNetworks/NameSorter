@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace NameSorter.Entity.Person.Interface
+namespace NameSorter.Core.Entity.Person.Interface
 {
     public interface IPersonValidator
     {

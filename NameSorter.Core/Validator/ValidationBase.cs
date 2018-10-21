@@ -1,11 +1,11 @@
-﻿using NameSorter.Exceptions;
+﻿using NameSorter.Core.Exceptions;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace NameSorter.Validator
+namespace NameSorter.Core.Validator
 {
     public abstract class ValidationBase<T> : IValidation where T : class
     {

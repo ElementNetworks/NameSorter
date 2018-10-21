@@ -1,4 +1,4 @@
-﻿using NameSorter.Entity.Person.Interface;
+﻿using NameSorter.Core.Entity.Person.Interface;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -6,7 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace NameSorter.Entity.Person
+namespace NameSorter.Core.Entity.Person
 { 
     /// <summary>
     /// This class handle action of reading text file and return its content
@@ -26,6 +26,12 @@ namespace NameSorter.Entity.Person
         /// <returns>Content of file</returns>
         public string Read()
         {
+            // check if file exist for specified path
+            if (!File.Exists(Directory.GetCurrentDirectory() + _filename))
+            {
+                throw new FileNotFoundException("File not found at path:" + _filename);
+            }
+
             var result = "";
             using (StreamReader sr = new StreamReader(_filename, Encoding.UTF8))
             {

@@ -1,11 +1,11 @@
-﻿using NameSorter.Entity.Person.Interface;
+﻿using NameSorter.Core.Entity.Person.Interface;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace NameSorter.Entity.Person
+namespace NameSorter.Core.Entity.Person
 { 
     /// <summary>
     /// This class uses comparer function to sort the list of person

@@ -60,13 +60,15 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\NameSorter\NameSorter.csproj">
+    <ProjectReference Include="..\NameSorter.Core\NameSorter.Core.csproj">
       <Project>{31b0fdc9-af55-472b-9e86-a801a4325f6f}</Project>
-      <Name>NameSorter</Name>
+      <Name>NameSorter.Core</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <WCFMetadata Include="Connected Services\" />
+    <Content Include="unsorted-names-list.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
   <Import Project="$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets" Condition="Exists('$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets')" />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

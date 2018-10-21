@@ -1,5 +1,5 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-using NameSorter.Entity.Person;
+using NameSorter.Core.Entity.Person;
 using System;
 using System.Collections.Generic;
 using System.IO;

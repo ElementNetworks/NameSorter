@@ -1,12 +1,12 @@
-﻿using NameSorter.Entity;
-using NameSorter.Validator;
+﻿using NameSorter.Core.Entity;
+using NameSorter.Core.Validator;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace NameSorter.Entity.Person.Validator
+namespace NameSorter.Core.Entity.Person.Validator
 {
     public class LastNameValidation : ValidationBase<PersonDTO>
     { 

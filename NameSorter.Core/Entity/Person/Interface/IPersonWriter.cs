@@ -4,10 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace NameSorter.Entity.Person.Interface
+namespace NameSorter.Core.Entity.Person.Interface
 {
-    public interface IPersonParser
+    public interface IPersonWriter
     {
-        IList<PersonDTO> Parse(string personList);
+        void Write(IList<PersonDTO> PersonData);
     }
 }

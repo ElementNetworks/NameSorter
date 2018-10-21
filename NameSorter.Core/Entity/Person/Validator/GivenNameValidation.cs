@@ -1,12 +1,12 @@
-﻿using NameSorter.Entity;
-using NameSorter.Validator;
+﻿using NameSorter.Core.Entity;
+using NameSorter.Core.Validator;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace NameSorter.Entity.Person.Validator
+namespace NameSorter.Core.Entity.Person.Validator
 {
     /// <summary>
     /// Validate a person given name: A name must have at least 1 given name and may have up to 3 given names

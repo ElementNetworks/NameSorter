@@ -1,13 +1,13 @@
-﻿using NameSorter.Entity.Person.Interface;
-using NameSorter.Entity.Person.Validator;
-using NameSorter.Validator;
+﻿using NameSorter.Core.Entity.Person.Interface;
+using NameSorter.Core.Entity.Person.Validator;
+using NameSorter.Core.Validator;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace NameSorter.Entity.Person
+namespace NameSorter.Core.Entity.Person
 { 
     /// <summary>
     /// This class handle parsing of person data and assigning it to person object
@@ -15,11 +15,18 @@ namespace NameSorter.Entity.Person
     public class PersonFileParser : IPersonParser
     {
         public IEnumerable<string> ParserMessage { get; set; }
+        private string _delimiter;
+
+        public PersonFileParser(string delimiter)
+        {
+            _delimiter = delimiter;
+        }
 
         /// <summary>
         /// Parse data seperated by newline and assign to person object
         /// </summary>
         /// <param name="fileData">Data separated by newline</param>
+        /// <param name="delimiter">Row data separator</param>
         /// <returns>List of persons</returns>
         public IList<PersonDTO> Parse(string fileData)
         {
@@ -31,10 +38,10 @@ namespace NameSorter.Entity.Person
                 var givenName = "";
                 var lastName = "";
                 
-                if (line.IndexOf(" ") > 0)
+                if (line.IndexOf(_delimiter) > 0)
                 {
-                    givenName = line.Substring(0, line.LastIndexOf(" "));
-                    lastName = line.Substring(line.LastIndexOf(" ") + 1);
+                    givenName = line.Substring(0, line.LastIndexOf(_delimiter));
+                    lastName = line.Substring(line.LastIndexOf(_delimiter) + 1);
                 }  
                 else
                 {

@@ -1,5 +1,5 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-using NameSorter.Entity.Person;
+using NameSorter.Core.Entity.Person;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -15,16 +15,18 @@ namespace NameSorter.Tests.Entity.Person
         public void Is_File_Processed_Successfully()
         {
             // Arrange 
-            var filename = "./unsorted-names-list.txt";
-            var reader = new PersonFileReader(filename);
-            var parser = new PersonFileParser();
-            var writer = new PersonFileWriter(filename);
+            var inputFilename = "./unsorted-names-list.txt";
+            var outputFilename = "sorted-names-list.txt";
+            var delimiter = "";
+            var reader = new PersonFileReader(inputFilename);
+            var parser = new PersonFileParser(delimiter);
+            var writer = new PersonFileWriter(outputFilename);
             var sorter = new PersonSorter(new PersonNameComparer());
             var validator = new PersonValidator();
-            var processor = new PersonProcessor(); 
+            var processor = new PersonProcessor(reader, parser, writer, validator, sorter); 
 
             // Act 
-            var sortedList = processor.Process(reader, parser, writer, validator, sorter);
+            var sortedList = processor.Process();
 
             // Assert
             Assert.IsTrue(true);

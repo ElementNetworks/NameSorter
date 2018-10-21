@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace NameSorter.Exceptions
+namespace NameSorter.Core.Exceptions
 {
     public class ValidationException : Exception
     {

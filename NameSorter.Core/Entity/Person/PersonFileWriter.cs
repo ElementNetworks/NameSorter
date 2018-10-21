@@ -1,4 +1,4 @@
-﻿using NameSorter.Entity.Person.Interface;
+﻿using NameSorter.Core.Entity.Person.Interface;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -6,7 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace NameSorter.Entity.Person
+namespace NameSorter.Core.Entity.Person
 { 
     /// <summary>
     /// This class handle action of creating output text file format

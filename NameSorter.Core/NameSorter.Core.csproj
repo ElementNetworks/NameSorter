@@ -1,0 +1,74 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{31B0FDC9-AF55-472B-9E86-A801A4325F6F}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>NameSorter.Core</RootNamespace>
+    <AssemblyName>NameSorter.Core</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Entity\Person\Interface\IPersonParser.cs" />
+    <Compile Include="Entity\Person\Interface\IPersonReader.cs" />
+    <Compile Include="Entity\Person\Interface\IPersonSorter.cs" />
+    <Compile Include="Entity\Person\Interface\IPersonValidator.cs" />
+    <Compile Include="Entity\Person\Interface\IPersonWriter.cs" />
+    <Compile Include="Entity\Person\PersonComparer.cs" />
+    <Compile Include="Entity\Person\PersonDto.cs" />
+    <Compile Include="Entity\Person\PersonFileReader.cs" />
+    <Compile Include="Entity\Person\PersonFileWriter.cs" />
+    <Compile Include="Entity\Person\PersonFileParser.cs" />
+    <Compile Include="Entity\Person\PersonProcessor.cs" />
+    <Compile Include="Entity\Person\PersonSorter.cs" />
+    <Compile Include="Entity\Person\PersonValidator.cs" />
+    <Compile Include="Exceptions\ValidationException.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Entity\Person\Validator\GivenNameValidation.cs" />
+    <Compile Include="Validator\IValidation.cs" />
+    <Compile Include="Entity\Person\Validator\LastNameValidation.cs" />
+    <Compile Include="Validator\ValidationBase.cs" />
+    <Compile Include="Validator\ValidationList.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

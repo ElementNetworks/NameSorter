@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{31B0FDC9-AF55-472B-9E86-A801A4325F6F}</ProjectGuid>
+    <ProjectGuid>{39B7C21D-744E-41F4-9CE5-2061B0B7B3C0}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>NameSorter</RootNamespace>
-    <AssemblyName>Name-Sorter</AssemblyName>
+    <RootNamespace>NameSorter.Console</RootNamespace>
+    <AssemblyName>name-sorter</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -42,36 +42,22 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Entity\Person\Interface\IPersonParser.cs" />
-    <Compile Include="Entity\Person\Interface\IPersonReader.cs" />
-    <Compile Include="Entity\Person\Interface\IPersonSorter.cs" />
-    <Compile Include="Entity\Person\Interface\IPersonValidator.cs" />
-    <Compile Include="Entity\Person\Interface\IPersonWriter.cs" />
-    <Compile Include="Entity\Person\PersonComparer.cs" />
-    <Compile Include="Entity\Person\PersonDto.cs" />
-    <Compile Include="Entity\Person\PersonFileReader.cs" />
-    <Compile Include="Entity\Person\PersonFileWriter.cs" />
-    <Compile Include="Entity\Person\PersonFileParser.cs" />
-    <Compile Include="Entity\Person\PersonProcessor.cs" />
-    <Compile Include="Entity\Person\PersonSorter.cs" />
-    <Compile Include="Entity\Person\PersonValidator.cs" />
-    <Compile Include="Exceptions\ValidationException.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Entity\Person\Validator\GivenNameValidation.cs" />
-    <Compile Include="Validator\IValidation.cs" />
-    <Compile Include="Entity\Person\Validator\LastNameValidation.cs" />
-    <Compile Include="Validator\ValidationBase.cs" />
-    <Compile Include="Validator\ValidationList.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\NameSorter.Core\NameSorter.Core.csproj">
+      <Project>{31b0fdc9-af55-472b-9e86-a801a4325f6f}</Project>
+      <Name>NameSorter.Core</Name>
+    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <Content Include="unsorted-names-list.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
   </ItemGroup>
-  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

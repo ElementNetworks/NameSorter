@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace NameSorter.Entity.Person
+namespace NameSorter.Core.Entity.Person
 { 
     /// <summary>
     /// This class holds attributes belonging to a person such as name, age, etc

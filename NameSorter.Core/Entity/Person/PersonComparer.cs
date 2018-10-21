@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace NameSorter.Entity.Person
+namespace NameSorter.Core.Entity.Person
 {
     /// <summary>
     /// Compare a person object first by last name, then by any given names the person may have

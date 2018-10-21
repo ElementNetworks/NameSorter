@@ -3,9 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.27703.2047
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NameSorter", "NameSorter\NameSorter.csproj", "{31B0FDC9-AF55-472B-9E86-A801A4325F6F}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NameSorter.Core", "NameSorter.Core\NameSorter.Core.csproj", "{31B0FDC9-AF55-472B-9E86-A801A4325F6F}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NameSorter.Tests", "NameSorter.Test\NameSorter.Tests.csproj", "{39FA6C46-0CDD-49EE-962D-21F45E7FC1F9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NameSorter.Console", "NameSorter.Console\NameSorter.Console.csproj", "{39B7C21D-744E-41F4-9CE5-2061B0B7B3C0}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{39FA6C46-0CDD-49EE-962D-21F45E7FC1F9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{39FA6C46-0CDD-49EE-962D-21F45E7FC1F9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{39FA6C46-0CDD-49EE-962D-21F45E7FC1F9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{39B7C21D-744E-41F4-9CE5-2061B0B7B3C0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{39B7C21D-744E-41F4-9CE5-2061B0B7B3C0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{39B7C21D-744E-41F4-9CE5-2061B0B7B3C0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{39B7C21D-744E-41F4-9CE5-2061B0B7B3C0}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

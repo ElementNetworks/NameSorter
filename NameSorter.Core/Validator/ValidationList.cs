@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace NameSorter.Validator
+namespace NameSorter.Core.Validator
 {
     public interface IValidationList
     {
