@@ -2,6 +2,8 @@
 NameSorter is a simple console in C# that sorts a list of names according to condition :
 Given a set of names, order that set first by last name, then by any given names the person may have. A name must have at least 1 given name and may have up to 3 given names.
 
+The project is build using Visual Studio 2017, .NET framework 4.6.1
+
 ## Example Usage
 
 Given a file called unsorted-names-list.txt containing the following list of names;
